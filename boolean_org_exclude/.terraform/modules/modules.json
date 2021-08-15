@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"org-disable-ipv6-for-compute-engines","Source":"terraform-google-modules/org-policy/google","Version":"5.0.0","Dir":".terraform/modules/org-disable-ipv6-for-compute-engines"},{"Key":"","Source":"","Dir":"."}]}

@@ -31,6 +31,6 @@ module "org-disable-serial-port-access" {
   project_id      = var.project_id
   constraint      = "compute.disableSerialPortAccess"
   policy_type     = "boolean"
-  enforce         = true
+  enforce         = false
 }
 

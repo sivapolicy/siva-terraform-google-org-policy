@@ -27,7 +27,7 @@ jobs:
       with:
           tf_actions_version: 1.0.3
           tf_actions_subcommand: 'init'
-          tf_actions_working_dir: ./boolean_org_exclude/
+          tf_actions_working_dir: ./boolean_org_exclude
           tf_actions_comment: true
      
     # Generates an execution plan for Terraform
@@ -36,7 +36,7 @@ jobs:
       with:
           tf_actions_version: 1.0.3
           tf_actions_subcommand: 'plan'
-          tf_actions_working_dir: ./boolean_org_exclude/
+          tf_actions_working_dir: ./boolean_org_exclude
           tf_actions_comment: true
 
       # On push to master, build or change infrastructure according to Terraform configuration files
@@ -46,7 +46,7 @@ jobs:
       with:
           tf_actions_version: 1.0.3
           tf_actions_subcommand: 'apply -auto-approve'
-          tf_actions_working_dir: ./boolean_org_exclude/
+          tf_actions_working_dir: ./boolean_org_exclude
           tf_actions_comment: true
       
       

@@ -25,7 +25,7 @@ jobs:
     - name: Terraform Init
       uses: hashicorp/terraform-github-actions@master
       with:
-          tf_actions_version: 0.12.13
+          tf_actions_version: 1.0.3
           tf_actions_subcommand: 'init'
           tf_actions_working_dir: ./boolean_org_exclude/
           tf_actions_comment: true
@@ -33,19 +33,26 @@ jobs:
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       with:
+          tf_actions_version: 1.0.3
+          tf_actions_subcommand: 'fmt'
           tf_actions_working_dir: ./boolean_org_exclude/
-      run: terraform fmt -check
-
+          tf_actions_comment: true
+     
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       with:
+          tf_actions_version: 1.0.3
+          tf_actions_subcommand: 'plan'
           tf_actions_working_dir: ./boolean_org_exclude/
-      run: terraform plan
+          tf_actions_comment: true
 
       # On push to master, build or change infrastructure according to Terraform configuration files
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
     - name: Terraform Apply
       with:
+          tf_actions_version: 1.0.3
+          tf_actions_subcommand: 'apply -auto-approve'
           tf_actions_working_dir: ./boolean_org_exclude/
-      if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-      run: terraform apply -auto-approve
+          tf_actions_comment: true
+      
+      

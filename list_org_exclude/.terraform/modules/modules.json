@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"org-disable-serial-port-access","Source":"terraform-google-modules/org-policy/google","Version":"5.0.0","Dir":".terraform/modules/org-disable-serial-port-access"},{"Key":"org-allow-trusted-images","Source":"terraform-google-modules/org-policy/google","Version":"5.0.0","Dir":".terraform/modules/org-allow-trusted-images"},{"Key":"","Source":"","Dir":"."}]}

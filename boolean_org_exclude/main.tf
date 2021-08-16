@@ -9,11 +9,11 @@ terraform {
 
 /******************************************
   Provider configuration
- *****************************************/
+ ****************************************
 provider "google" {
   # Configuration options
   credentials = "${file("service-account.json")}"
-}
+}*/
 
 /******************************************
   Provider configuration

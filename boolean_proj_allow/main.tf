@@ -9,18 +9,14 @@ terraform {
 
 /******************************************
   Provider configuration
- ****************************************
+ *****************************************/
 provider "google" {
   # Configuration options
-  credentials = "${file("service-account.json")}"
-}*/
-
-/******************************************
-  Provider configuration
- *****************************************/
-/* provider "google" {
-  version = "~> 3.53"
-} */
+  version     = "~> 3.53"
+  region      = "asia-south1"
+  zone        = "asia-south1-c"
+  /* credentials = "${file("service-account.json")}" */
+}
 
 /******************************************
   Apply the constraint using the module

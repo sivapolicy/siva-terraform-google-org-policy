@@ -26,7 +26,7 @@ module "org-disable-ipv6-for-compute-engines" {
   policy_for      = "organization"
   organization_id = var.organization_id
   constraint      = "compute.disableAllIpv6"
-  enforce         = false
+  enforce         = true
   policy_type     = "boolean"
   exclude_folders = ["folders/${var.excluded_folder_id}"]
 }

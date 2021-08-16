@@ -18,11 +18,11 @@ jobs:
 
     steps:
     - name: configure gcloud
-      id: config_gcloud
-      uses: google-github-actions/setup-gcloud@master
+      uses: GoogleCloudPlatform/setup-gcloud@master
       with:
           version: "latest"
           service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
 
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
